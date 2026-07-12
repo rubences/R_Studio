@@ -1,0 +1,22 @@
+
+Call:
+summary.resamples(object = comparacion_cv)
+
+Models: kNN, SVM_radial 
+Number of resamples: 15 
+
+ROC 
+                Min.   1st Qu. Median      Mean 3rd Qu. Max. NA's
+kNN        0.9726562 0.9980469      1 0.9971354       1    1    0
+SVM_radial 0.9843750 0.9960938      1 0.9973958       1    1    0
+
+Sens 
+            Min. 1st Qu. Median      Mean 3rd Qu. Max. NA's
+kNN        0.750  0.9375      1 0.9583333       1    1    0
+SVM_radial 0.875  1.0000      1 0.9750000       1    1    0
+
+Spec 
+             Min. 1st Qu. Median      Mean 3rd Qu. Max. NA's
+kNN        0.9375  0.9375      1 0.9791667       1    1    0
+SVM_radial 0.9375  0.9375      1 0.9750000       1    1    0
+

@@ -1,0 +1,13 @@
+INTERPRETACIÓN DEL EJEMPLO NO SUPERVISADO
+=========================================
+
+Se aplicó PCA sobre las cuatro variables numéricas estandarizadas del conjunto iris.
+Las dos primeras componentes explican conjuntamente el 95.81% de la variabilidad total.
+Las tres primeras componentes explican conjuntamente el 99.48% de la variabilidad total.
+Después se aplicó K-means con k = 3 sobre los predictores estandarizados.
+El índice de silueta medio fue 0.46. La estructura de clústeres es débil o moderada y existe solapamiento.
+La etiqueta Species se excluyó completamente de PCA y K-means y solo se utilizó al final para interpretar la correspondencia entre los clústeres y las especies reales.
+
+FRASE MODELO PARA EL EXAMEN
+---------------------------
+PCA permitió reducir los datos a dos y tres dimensiones, conservando respectivamente el 95.81% y el 99.48% de la varianza. K-means identificó 3 grupos y la silueta media fue 0.46, por lo que la estructura de clústeres es débil o moderada y existe solapamiento.
