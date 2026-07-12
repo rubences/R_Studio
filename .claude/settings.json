@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Programs\\\\R\\\\R-4.6.1\\\\bin\\\\x64\\\\Rscript.exe\" -e \"cat\\(sapply\\(c\\('ggplot2','cluster','scatterplot3d'\\), requireNamespace, quietly=TRUE\\)\\)\")",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\rjuarcad\\\\Desktop\\\\R_Studio\\\\Plantillas_Examen_IA_R\"; & \"$env:LOCALAPPDATA\\\\Programs\\\\R\\\\R-4.6.1\\\\bin\\\\x64\\\\Rscript.exe\" \"13C_EJEMPLO_NO_SUPERVISADO_MDS_2D_3D_CON_LIMPIEZA_NA.R\" | Select-Object -Last 15)"
+    ]
+  }
+}
