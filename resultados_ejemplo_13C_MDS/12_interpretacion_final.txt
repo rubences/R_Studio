@@ -1,0 +1,12 @@
+INTERPRETACIÓN DEL EJEMPLO NO SUPERVISADO
+=========================================
+
+El conjunto airquality contenía valores ausentes reales. Primero se cuantificaron los NA, se eliminaron las filas y columnas que superaban los umbrales establecidos y los NA restantes se sustituyeron por la mediana de cada variable.
+Después se estandarizaron las variables y se aplicó MDS clásico para obtener representaciones en dos y tres dimensiones.
+Las dos primeras dimensiones representan aproximadamente el 78.14% de la información asociada a los autovalores positivos.
+Las tres primeras dimensiones representan aproximadamente el 90.61%.
+K-means identificó 3 clústeres y el índice de silueta medio fue 0.309; por tanto, los grupos muestran una separación débil o moderada.
+
+FRASE MODELO PARA EL EXAMEN
+---------------------------
+Tras limpiar los datos, imputar los valores ausentes con la mediana y estandarizar las variables, se aplicó MDS clásico. La representación en 2D y 3D permitió visualizar 3 grupos obtenidos mediante K-means. La silueta media fue 0.309, lo que indica que los grupos muestran una separación débil o moderada.
