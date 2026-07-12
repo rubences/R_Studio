@@ -1,0 +1,9 @@
+Copia aquí los archivos CSV del examen.
+
+Nombres usados por defecto en las plantillas:
+- data.csv
+- labels.csv
+- dataset_expresiongenes_cancer.csv
+
+Puedes cambiar los nombres en el bloque CONFIGURACIÓN de cada script.
+No cambies los CSV originales. Trabaja siempre sobre copias.
