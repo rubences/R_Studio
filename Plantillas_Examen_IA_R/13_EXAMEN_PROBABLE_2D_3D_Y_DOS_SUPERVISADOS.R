@@ -28,6 +28,13 @@
 rm(list = ls())
 
 # Cargamos las funciones auxiliares del paquete de plantillas.
+# Si se ejecuta desde la raíz del repositorio, entrar en la carpeta
+# de las plantillas para que las rutas relativas funcionen.
+if (!file.exists("00_UTILIDADES.R") &&
+    file.exists(file.path("Plantillas_Examen_IA_R", "00_UTILIDADES.R"))) {
+  setwd("Plantillas_Examen_IA_R")
+}
+
 source("00_UTILIDADES.R")
 
 # Comprobamos que RStudio está situado en la carpeta del proyecto.
