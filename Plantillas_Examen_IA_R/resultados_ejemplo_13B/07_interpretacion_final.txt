@@ -1,0 +1,11 @@
+INTERPRETACIÓN DEL EJEMPLO SUPERVISADO
+======================================
+
+Se construyó un problema de clasificación binaria para distinguir muestras Virginica frente a No_virginica.
+Se reservó el 20% de los datos como conjunto test independiente.
+Los modelos k-NN y SVM radial se ajustaron mediante 5 folds de validación cruzada repetidos 3 veces.
+El modelo seleccionado fue SVM_radial, con AUC = 0.99, Accuracy = 0.933, Sensibilidad = 0.8, Especificidad = 1 y F1 = 0.889.
+
+FRASE MODELO PARA EL EXAMEN
+---------------------------
+Tras comparar ambos clasificadores sobre un conjunto de prueba no utilizado durante el entrenamiento, se selecciona SVM_radial porque presenta la mejor combinación de AUC y exactitud. La matriz de confusión, la sensibilidad, la especificidad y F1 permiten comprobar que el rendimiento no depende únicamente del porcentaje global de aciertos.

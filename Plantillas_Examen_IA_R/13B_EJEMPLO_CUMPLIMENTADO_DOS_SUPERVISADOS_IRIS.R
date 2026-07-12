@@ -386,7 +386,7 @@ png(
 )
 
 print(
-  caret::bwplot(
+  lattice::bwplot(
     comparacion_cv,
     metric = "ROC",
     main = "Comparación del AUC en validación cruzada"

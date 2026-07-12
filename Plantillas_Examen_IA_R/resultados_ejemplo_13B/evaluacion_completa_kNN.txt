@@ -1,0 +1,27 @@
+Confusion Matrix and Statistics
+
+              Reference
+Prediction     Virginica No_virginica
+  Virginica            7            1
+  No_virginica         3           19
+                                          
+               Accuracy : 0.8667          
+                 95% CI : (0.6928, 0.9624)
+    No Information Rate : 0.6667          
+    P-Value [Acc > NIR] : 0.01223         
+                                          
+                  Kappa : 0.6842          
+                                          
+ Mcnemar's Test P-Value : 0.61708         
+                                          
+            Sensitivity : 0.7000          
+            Specificity : 0.9500          
+         Pos Pred Value : 0.8750          
+         Neg Pred Value : 0.8636          
+             Prevalence : 0.3333          
+         Detection Rate : 0.2333          
+   Detection Prevalence : 0.2667          
+      Balanced Accuracy : 0.8250          
+                                          
+       'Positive' Class : Virginica       
+                                          

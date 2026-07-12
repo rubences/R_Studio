@@ -1,0 +1,5 @@
+"Prediction","Reference","Freq"
+"Virginica","Virginica",7
+"No_virginica","Virginica",3
+"Virginica","No_virginica",1
+"No_virginica","No_virginica",19
