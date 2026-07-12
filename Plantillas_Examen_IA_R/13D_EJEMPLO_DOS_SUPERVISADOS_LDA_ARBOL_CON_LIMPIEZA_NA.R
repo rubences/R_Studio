@@ -130,7 +130,8 @@ asegurar_paquetes(
     "MASS",
     "rpart",
     "rpart.plot",
-    "pROC"
+    "pROC",
+    "lattice"
   )
 )
 
@@ -139,6 +140,7 @@ library(MASS)
 library(rpart)
 library(rpart.plot)
 library(pROC)
+library(lattice)
 
 
 ############################################################
@@ -972,8 +974,10 @@ png(
   res = 140
 )
 
+# bwplot pertenece al paquete lattice. caret proporciona el método
+# específico para objetos resamples, pero no exporta bwplot directamente.
 print(
-  caret::bwplot(
+  lattice::bwplot(
     comparacion_cv,
     metric = "ROC",
     main = "AUC en validación cruzada"
