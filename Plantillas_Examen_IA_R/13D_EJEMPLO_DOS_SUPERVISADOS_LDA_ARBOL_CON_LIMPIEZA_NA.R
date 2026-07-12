@@ -282,10 +282,20 @@ datos <- biopsy
 
 # El identificador se conserva como nombre de fila, pero no se usa
 # como predictor porque no posee significado clínico predictivo.
-rownames(datos) <- paste0(
-  "ID_",
-  datos$ID
+#
+# IMPORTANTE:
+# El dataset biopsy contiene algunos identificadores repetidos.
+# R no permite nombres de fila duplicados. Por eso make.unique()
+# añade sufijos como "_rep1", "_rep2", etc., solo cuando hace falta.
+identificadores_unicos <- make.unique(
+  paste0(
+    "ID_",
+    datos$ID
+  ),
+  sep = "_rep"
 )
+
+rownames(datos) <- identificadores_unicos
 
 datos$ID <- NULL
 
@@ -1015,11 +1025,7 @@ evaluar_modelo <- function(
   }
 
   probabilidad_positiva <-
-    probabilidades[
-      [
-        CLASE_POSITIVA
-      ]
-    ]
+    probabilidades[[CLASE_POSITIVA]]
 
   matriz_confusion <- caret::confusionMatrix(
     data = clase_predicha,
@@ -1064,11 +1070,7 @@ evaluar_modelo <- function(
     }
 
     as.numeric(
-      vector[
-        [
-          nombre
-        ]
-      ]
+      vector[[nombre]]
     )
   }
 
