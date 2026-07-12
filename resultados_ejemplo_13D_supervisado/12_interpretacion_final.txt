@@ -1,0 +1,12 @@
+INTERPRETACIÓN DEL EJEMPLO SUPERVISADO
+======================================
+
+El conjunto biopsy contenía valores ausentes reales y se introdujeron NA adicionales para simular un fichero muy incompleto.
+Se eliminaron las filas con más del 60% de predictores ausentes y, utilizando únicamente el conjunto de entrenamiento, se eliminaron las columnas con más del 40% de NA.
+Los valores restantes se imputaron con medianas calculadas solo en entrenamiento y después se aplicaron tanto a train como a test, evitando fuga de información.
+Se compararon LDA y un árbol de decisión mediante 5 folds de validación cruzada repetidos 3 veces.
+El modelo seleccionado fue LDA, con AUC = 1, Accuracy = 0.964, Sensibilidad = 0.896, Especificidad = 1 y F1 = 0.945.
+
+FRASE MODELO PARA EL EXAMEN
+---------------------------
+Antes de entrenar los modelos se analizó el patrón de valores ausentes. Las filas y columnas excesivamente incompletas se eliminaron y los NA restantes se imputaron con medianas calculadas exclusivamente sobre entrenamiento. Después se compararon LDA y un árbol de decisión sobre un test independiente. El mejor modelo fue LDA al presentar la mejor combinación de AUC y exactitud.

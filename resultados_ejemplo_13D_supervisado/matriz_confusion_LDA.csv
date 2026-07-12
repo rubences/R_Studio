@@ -1,0 +1,5 @@
+"Prediction","Reference","Freq"
+"malignant","malignant",43
+"benign","malignant",5
+"malignant","benign",0
+"benign","benign",91

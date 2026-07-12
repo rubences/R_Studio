@@ -1,0 +1,27 @@
+Confusion Matrix and Statistics
+
+           Reference
+Prediction  malignant benign
+  malignant        43      0
+  benign            5     91
+                                          
+               Accuracy : 0.964           
+                 95% CI : (0.9181, 0.9882)
+    No Information Rate : 0.6547          
+    P-Value [Acc > NIR] : < 2e-16         
+                                          
+                  Kappa : 0.9184          
+                                          
+ Mcnemar's Test P-Value : 0.07364         
+                                          
+            Sensitivity : 0.8958          
+            Specificity : 1.0000          
+         Pos Pred Value : 1.0000          
+         Neg Pred Value : 0.9479          
+             Prevalence : 0.3453          
+         Detection Rate : 0.3094          
+   Detection Prevalence : 0.3094          
+      Balanced Accuracy : 0.9479          
+                                          
+       'Positive' Class : malignant       
+                                          
