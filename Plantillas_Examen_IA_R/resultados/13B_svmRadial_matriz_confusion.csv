@@ -1,0 +1,5 @@
+"Prediction","Reference","Freq"
+"Metastasis","Metastasis",24
+"Primary","Metastasis",0
+"Metastasis","Primary",0
+"Primary","Primary",24

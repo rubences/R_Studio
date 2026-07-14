@@ -1,0 +1,22 @@
+============================================================
+BORRADOR DE RESPUESTA: DOS MÉTODOS SUPERVISADOS
+============================================================
+
+1. PREPROCESAMIENTO
+Se conservaron predictores numéricos, se imputaron los valores ausentes mediante la mediana y se eliminaron las variables constantes.
+La muestra se dividió de forma estratificada en 80% para entrenamiento y 20% para prueba.
+El escalado se estimó exclusivamente con el conjunto de entrenamiento para evitar fuga de información.
+
+2. ENTRENAMIENTO
+Se entrenaron los modelos knn y svmRadial mediante validación cruzada y ajuste automático de hiperparámetros.
+
+3. EVALUACIÓN
+Los modelos se evaluaron sobre el conjunto de prueba mediante matriz de confusión, Accuracy y Kappa.
+Al tratarse de un problema binario también se calcularon sensibilidad, especificidad, precisión, F1 y AUC.
+
+4. SELECCIÓN DEL MODELO
+El modelo seleccionado fue knn porque obtuvo el mejor valor de AUC.
+Su Accuracy en test fue 1 y su AUC fue 1.
+
+5. INTERPRETACIÓN RESPONSABLE
+La decisión final no debe basarse únicamente en Accuracy: también deben considerarse el balance de clases, sensibilidad, especificidad y el coste de los falsos positivos y falsos negativos.

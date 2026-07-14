@@ -1,0 +1,3 @@
+"Metodo","Accuracy","Kappa","Sensitivity","Specificity","Precision","F1","AUC"
+"knn",1,1,1,1,1,1,1
+"svmRadial",1,1,1,1,1,1,1
