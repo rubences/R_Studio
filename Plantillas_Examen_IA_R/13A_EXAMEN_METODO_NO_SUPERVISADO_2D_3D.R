@@ -27,6 +27,13 @@
 
 rm(list = ls())
 
+# Si se ejecuta desde la raíz del repositorio, entrar en la carpeta
+# de las plantillas para que las rutas relativas funcionen.
+if (!file.exists("00_UTILIDADES.R") &&
+    file.exists(file.path("Plantillas_Examen_IA_R", "00_UTILIDADES.R"))) {
+  setwd("Plantillas_Examen_IA_R")
+}
+
 # Esta plantilla utiliza las funciones comunes del paquete.
 # Debe guardarse dentro de la carpeta Plantillas_Examen_IA_R,
 # junto al archivo 00_UTILIDADES.R.
@@ -41,12 +48,6 @@ if (!file.exists("00_UTILIDADES.R")) {
   )
 }
 
-# Si se ejecuta desde la raíz del repositorio, entrar en la carpeta
-# de las plantillas para que las rutas relativas funcionen.
-if (!file.exists("00_UTILIDADES.R") &&
-    file.exists(file.path("Plantillas_Examen_IA_R", "00_UTILIDADES.R"))) {
-  setwd("Plantillas_Examen_IA_R")
-}
 
 source("00_UTILIDADES.R")
 comprobar_directorio_proyecto()
