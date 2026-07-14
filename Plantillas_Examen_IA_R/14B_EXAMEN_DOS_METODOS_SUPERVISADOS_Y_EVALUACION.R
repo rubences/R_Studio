@@ -59,13 +59,14 @@ comprobar_directorio_proyecto()
 CONFIG <- list(
 
   # CSV situado dentro de la carpeta data/.
-  archivo = file.path("data", "dataset_expresiongenes_cancer.csv"),
+  archivo = file.path("data", "cirrhosis.csv"),
+  separador = ";",
 
   # Variable que se desea predecir.
-  objetivo = "primaryormetastasis",
+  objetivo = "Status",
 
   # Identificadores u otras columnas que no deben usarse como predictores.
-  columnas_excluir = c("id", "ID", "sample", "patient"),
+  columnas_excluir = c("Status"),
 
   # Límite de predictores numéricos. NULL utiliza todos los válidos.
   max_predictores = 50,
@@ -89,6 +90,9 @@ CONFIG <- list(
   # Semilla para reproducibilidad.
   semilla = 1995
 )
+
+
+
 ############################################################
 # FIN DE CONFIGURACIÓN
 ############################################################

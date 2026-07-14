@@ -1,0 +1,12 @@
+============================================================
+BORRADOR DE RESPUESTA: CLASIFICACIÓN SUPERVISADA
+============================================================
+
+Se utilizó el conjunto reducido de la parte 1 (coordenadas PCA 3D) y se dividió en train/test con proporción 0.8.
+Se entrenaron tres modelos supervisados: regresión logística, kNN y árbol de decisión.
+La clase positiva se fijó en 'D' para evaluar el evento clínico de no supervivencia.
+El mejor modelo según AUC y F1 fue 'glm' con Accuracy = 0.871, Precision = 0.87, Recall = 0.8, F1 = 0.833 y AUC = 0.894.
+
+Conclusión: si un modelo tiene mayor AUC y F1, separa mejor las clases y mantiene un mejor equilibrio entre falsos positivos y falsos negativos.
+En esta configuración, 'glm' fue el más conveniente porque ofreció el mejor compromiso global entre discriminación y equilibrio de clases.
+
