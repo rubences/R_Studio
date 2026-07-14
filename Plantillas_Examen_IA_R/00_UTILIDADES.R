@@ -374,15 +374,22 @@ crear_control_caret <- function(y,
   folds <- numero_folds_seguro(y, max_folds)
   binario <- nlevels(y) == 2
 
-  caret::trainControl(
+  argumentos_control <- list(
     method = if (repeticiones > 1) "repeatedcv" else "cv",
     number = folds,
-    repeats = if (repeticiones > 1) repeticiones else NULL,
     classProbs = TRUE,
     summaryFunction = if (binario) caret::twoClassSummary else caret::multiClassSummary,
     savePredictions = if (guardar_predicciones) "final" else "none",
     allowParallel = FALSE
   )
+
+  # Algunas versiones de caret fallan si repeats recibe NULL.
+  # Este argumento solo tiene sentido con validación cruzada repetida.
+  if (repeticiones > 1) {
+    argumentos_control$repeats <- repeticiones
+  }
+
+  do.call(caret::trainControl, argumentos_control)
 }
 
 # ------------------------------------------------------------------
