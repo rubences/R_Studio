@@ -1,0 +1,14 @@
+============================================================
+BORRADOR DE RESPUESTA: REDUCCIÓN DE DIMENSIONES NO SUPERVISADA
+============================================================
+
+Se cargó el conjunto cirrhosis.csv y se realizó una inspección básica de tipos, valores ausentes y estadísticas descriptivas.
+Las variables numéricas se limpiaron, se imputaron con la mediana cuando fue necesario y se estandarizaron antes de aplicar PCA.
+La variable de referencia 'Status' no participó en el ajuste no supervisado; solo se utilizó para una comparación descriptiva posterior.
+PCA se redujo a 2D y 3D. La varianza explicada por PC1+PC2 fue de 41.3% y por PC1+PC2+PC3 de 50.81%.
+Sobre las coordenadas reducidas se aplicó K-means con k = 3 para visualizar agrupamientos potenciales.
+La silueta media fue 0.428 en 2D y 0.348 en 3D. La representación más favorable fue la de 2D.
+La estructura de grupos es débil y debe interpretarse con cautela.
+
+Conclusión: PCA es una opción segura para este conjunto porque permite resumir la información numérica en pocas componentes y facilita la comparación visual en 2D/3D.
+
